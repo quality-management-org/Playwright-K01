@@ -1,10 +1,10 @@
 //validate length password
 
 function isValidPassword(password: string): boolean {
-  if (password.length >= 8) {
+  if (password.length >= 7) {
     return true;
   } else {
-    console.log("Password less than 8 chars");
+    console.log("Password less than 7 chars");
     return false;
   }
 }
