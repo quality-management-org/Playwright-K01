@@ -8,7 +8,7 @@ function isValidPassword(password: string): boolean {
     return false;
   }
 }
-console.log(isValidPassword("124564545"));
+console.log(isValidPassword("12456454555"));
 
 // Get discount
 
