@@ -35,6 +35,7 @@ test("Tạo mới account", async ({ page }) => {
   await page.getByLabel("Email address *").fill("hientest.899@test.com")  ;
   await page.getByLabel("Password *").fill("Hien@0956888667");
   await page.getByRole("button",{name: "Login"}).click();
-  const myAccountTitle = await page.getByRole("heading", {name: "My account"}).isVisible();
-  console.log(`Login thành công và chuyển đến trang My account: ${myAccountTitle}`);
+  const isMyAccountVisible = await page.getByRole("heading", {name: "My account"}).isVisible();
+  expect(isMyAccountVisible).toBeTruthy();
+  // console.log(`Login thành công và chuyển đến trang My account: ${myAccountTitle}`);
 });
