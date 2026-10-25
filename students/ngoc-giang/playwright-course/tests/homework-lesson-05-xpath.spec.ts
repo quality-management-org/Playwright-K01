@@ -123,3 +123,4 @@ test("locator Playwright và XPath", async ({ page }) => {
   const price = await page.locator('//*[@data-test="unit-price"]/parent::span');
   console.log("Giá có cả ký hiệu: " + price);
 });
+

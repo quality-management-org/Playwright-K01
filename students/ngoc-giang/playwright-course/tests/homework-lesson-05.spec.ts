@@ -1,9 +1,24 @@
 import { test, expect } from "@playwright/test";
 
 test("test Locator", async ({ page }) => {
+
+    // thẻ chuẩn: select: Subject 
+    // data-test="subject"
+    //id="subject"
+    // class="form-select ng-untouched ng-pristine ng-invalid"
+
+    // thẻ chuẩn input Attachment
+    // id="attachment"
+    // data-test="attachment"
+    // class="form-control ng-pristine ng-valid ng-touched"
+
+    // thẻ chuẩn input Send
+    // type="submit"
+    // data-test="contact-submit"
+    // class="btnSubmit"
+
     await page.goto("https://practicesoftwaretesting.com/");
     await page.locator('[data-test="nav-sign-in"]').click();
-
     await page
         .locator('[data-test="email"]')
         .fill("customer@practicesoftwaretesting.com");
@@ -47,3 +62,4 @@ test("test Locator", async ({ page }) => {
 
 
 });
+
