@@ -1,11 +1,15 @@
-import { Car } from "./car";
-import { ElectricCar } from "./electric-car";
+import { GasolineCar as GslCar} from "./gasoline-car"; // Named class
+import ElectricCar from "./electric-car"; // Default class 
 
-// const gasoline1 = new Car('đỏ', '30A-111');     // sản xuất xe thứ nhất
-// const gasoline2 = new Car('trắng', '29B-222');  // sản xuất xe thứ hai
-
-// gasoline1.run();   // Xe 30A-111 đang chạy
-
-const electricCar = new ElectricCar("green", "36A-12345", 80);
+const electricCar = new ElectricCar("Red", "29A-12345");
+electricCar.run();
 electricCar.charge();
-electricCar.getBattery();
+
+
+
+const redGasolineCar = new GslCar("Red", "30A-62348");
+const greenGasolineCar = new GslCar("Green", "30A-62345");
+redGasolineCar.run();
+greenGasolineCar.run();
+
+

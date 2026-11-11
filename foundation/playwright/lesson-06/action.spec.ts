@@ -1,5 +1,13 @@
 import { expect, test } from "@playwright/test";
 
+export type Account = {
+    name: string 
+    password: string;
+}
+
+function login(account: Account) {
+}
+
 test('verify login to dashboard successfully', async ({ page }) => {
     await page.goto('https://practicesoftwaretesting.com/auth/login');
 

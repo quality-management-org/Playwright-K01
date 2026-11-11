@@ -1,7 +1,7 @@
 import { Car } from "./car";
 
-export class GasolineCar extends Car {
-    refuel() {
-        console.log(`Xe ${this.plate} đang đổ xăng`);
-    }
+export class GasolineCar extends Car{
+  refuel() {
+    console.log("Xe đang được đổ xăng");
+  }
 }

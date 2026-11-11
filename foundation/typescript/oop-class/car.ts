@@ -1,13 +1,19 @@
-export class Car {                          // bản thiết kế
+export class Car {
   color: string;
   plate: string;
 
-  constructor(color: string, plate: string) {   // lúc sản xuất: nhận màu, biển số
+  constructor(color: string, plate: string) {
     this.color = color;
     this.plate = plate;
   }
 
-  run() {    
-    console.log(`Xe ${this.plate} đang chạy`);
+  run() {
+    console.log(
+      `Xe có biển số ${this.plate} và màu sắc ${this.color} đang chạy`,
+    );
+  }
+
+  washingCar() {
+    console.log(`Xe ${this.plate} đang được rửa`);
   }
 }
