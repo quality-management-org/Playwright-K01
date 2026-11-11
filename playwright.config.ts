@@ -15,11 +15,13 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
+  expect: { timeout: 10_000 },
   reporter: [
     ['html', { outputFolder: 'playwright-report' }]
   ],
   use: {
-    trace: 'on',
+    baseURL: 'https://practicesoftwaretesting.com',
+    trace: 'off',
     headless: false, // GUI
     testIdAttribute: 'data-test',
     actionTimeout: 15_000
