@@ -3,9 +3,17 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "strict": false,
+    "strict": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-    "types": ["node"]
-  }
+    "types": ["node"],
+    "paths": {
+      "@pages/*": ["./pages/*"],
+      "@test-data/*": ["./test-data/*"],
+      "@data-types/*": ["./data-types/*"],
+      "@utils/*": ["./utils/*"]
+    }
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "playwright-report"]
 }
