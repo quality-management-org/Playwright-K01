@@ -7,7 +7,7 @@ import { ProductDetailPage } from "../pages/product/product.detail.page";
 import products from "../test-data/product.json";
 import { CheckoutPage } from "../pages/checkout/checkout.page";
 
-test('Verify login to dashboard successfully', async({page}) => {
+test('Verify checkout flow', async({page}) => {
     const loginPage = new LoginPage(page);
     const accountPage = new AccountPage(page);
     const productDetailPage = new ProductDetailPage(page);
