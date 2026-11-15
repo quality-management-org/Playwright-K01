@@ -1,0 +1,10 @@
+{
+ "Address": [{
+  "country": "Viet Nam",
+  "postalCode": "100000",
+  "houseNumber": "42",
+  "street": "Xuan Thuy",
+  "city": "Ha Noi",
+  "state": "Cau Giay"
+ }] 
+}
