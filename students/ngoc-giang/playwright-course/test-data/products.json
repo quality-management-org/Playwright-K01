@@ -1,0 +1,14 @@
+{
+    "product": [
+        {
+            "productName": "Hammer",
+            "quantity": 1,
+            "unitPrice": 12.58
+        },
+        {
+            "productName": "Pliers",
+            "quantity": 1,
+            "unitPrice": 12.01
+        }
+    ]
+}
