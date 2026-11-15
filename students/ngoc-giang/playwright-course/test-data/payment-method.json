@@ -1,0 +1,22 @@
+{
+    "PaymentMethod": [
+        {
+            "paymentType": "Bank Transfer",
+            "bankName": "",
+            "accountName": ""
+        },
+        {
+            "paymentType": "Credit Card",
+            "creditCardNumber": "",
+            "expiredDate": "",
+            "cVV":"",
+            "cardHolderName":"John Doe"
+        }
+        ,
+        {
+            "paymentType": "Gift Card",
+            "giftCardNumber": "1234567890123456",
+            "validationCode": "1A2A"
+        }
+    ]
+}
