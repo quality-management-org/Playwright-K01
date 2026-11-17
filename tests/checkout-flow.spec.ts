@@ -1,6 +1,5 @@
 import test, { expect } from "@playwright/test";
 import { LoginPage } from "../pages/login/login.page";
-import user from "../test-data/account.json";
 import AccountPage from "../pages/account/account.page";
 import { HomePage } from "../pages/home/home.page";
 import { ProductDetailPage } from "../pages/product/product.detail.page";
@@ -20,7 +19,10 @@ test('Verify checkout flow', async({page}) => {
     });
 
     await test.step("Step 2: Login to dashboard", async () => {  
-        await loginPage.login(user.account);
+        await loginPage.login({
+            email: process.env.EMAIL || '',
+            password: process.env.PASSWORD || ''
+        });
         await expect(page).toHaveURL(/account/);
         await expect(accountPage.heading).toBeVisible();
         await productDetailPage.goToHome();
