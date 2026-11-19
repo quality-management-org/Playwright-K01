@@ -1,10 +1,9 @@
 import test, { expect } from "@playwright/test";
-import { LoginPage } from "../pages/login/login.page";
-import AccountPage from "../pages/account/account.page";
-import { HomePage } from "../pages/home/home.page";
-import { ProductDetailPage } from "../pages/product/product.detail.page";
 import products from "../test-data/product.json";
-import { CheckoutPage } from "../pages/checkout/checkout.page";
+import { LoginPage } from "@pages/login/login.page";
+import AccountPage from "@pages/account/account.page";
+import { ProductDetailPage } from "@pages/product/product.detail.page";
+import { CheckoutPage } from "@pages/checkout/checkout.page";
 
 test('Verify checkout flow', async({page}) => {
     const loginPage = new LoginPage(page);
@@ -33,7 +32,6 @@ test('Verify checkout flow', async({page}) => {
         await productDetailPage.addToCart(productNames);
         const cartCount = await productDetailPage.getCartCount();
         await expect(cartCount).toBe(2);
-        console.log(`added product number is ${cartCount}`)
     });
 
     await test.step("Step 4: Go to checkout page and remove 1 product", async () => {
